@@ -1,0 +1,26 @@
+         User
+          ||
+          vv
+       Internet
+          || 
+          vv
+      DNS Server
+          ||
+          Vv
+Domain Name: example.com
+          ||
+          Vv
+    Nginx Web Server
+          ||
+          Vv
+  Load Balancer
+       /    \
+      ||     ||
+      vv     vv
+   App Server App Server
+      ||     ||
+      vv     vv
+     MySQL Database
+          ||
+          Vv
+    Application Files
