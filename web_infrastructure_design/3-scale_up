@@ -1,0 +1,48 @@
+                                User
+                                 ||
+                                 vv
+                             Internet
+                                 ||
+                                 vv
+                            DNS Server
+                                 ||
+                                 vv
+                     Domain Name: example.com
+                                 ||
+                                 vv
+                     Load Balancer (HAproxy)
+              (Clustered with another Load Balancer)
+                                 ||
+                                 vv
+                  -----------------------------
+                  |                           |
+                  v                           v
+              Web Server 1               Web Server 2
+                  |                           |
+                  v                           v
+               (Nginx)                      (Nginx)
+                 ||                           ||
+                 ||                           ||
+                 vv                           vv
+        Application Server 1          Application Server 2
+                 |                            |
+                 v                            v
+             (Code Base)                  (Code Base)
+                 |                            |
+                 v                            v
+             ---------                    ---------
+             |       |                    |       |
+            Data    Data                 Data    Data
+            base    base                 base    base
+             1       2                    3       4
+             |                            |       |
+             v                            v       v
+           MySQL Cluster 1            MySQL Cluster 2
+         (Primary-Replica setup)    (Primary-Replica setup)
+             |                            |
+             v                            v
+          --------                   --------
+          |      |                   |      |
+         Rep    Rep                 Rep    Rep
+         Node   Node                Node   Node
+         1      2                   1      2
