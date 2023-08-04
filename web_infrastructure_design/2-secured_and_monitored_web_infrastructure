@@ -1,0 +1,37 @@
+                        User
+                         ||
+                         vv
+                      Internet
+                         ||
+                         vv
+                     DNS Server
+                         ||
+                         vv
+              Domain Name: foobar.com
+                         ||
+                         vv
+                  Firewall (WAF)
+                   |    |    |
+                   v    v    v 
+             Firewall Firewall Firewall
+              |         |          |
+              v         v          v
+     ------------ ------------ ------------
+     |          | |          | |          |
+     v          v v          v v          v 
+   Web Server  Web Server  Web Server  (SSL Certificate)
+     |             |           |        (HTTPS Enabled)
+     v             v           v  
+   (Nginx)      (Nginx)     (Nginx)
+     |             |           | 
+     v             v           v
+  Application Application Application
+   Server       Server       Server
+     |             |           |
+     v             v           v
+   MySQL         MySQL      MySQL
+   Database    Database    Database
+                   ||
+                   vv
+          Monitoring Clients
+          (Data Collectors)
