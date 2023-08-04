@@ -1,0 +1,36 @@
+                     User
+                      ||
+                      vv
+                   Internet
+                      ||
+                      vv
+                 DNS Server
+                      ||
+                      vv
+           Domain Name: example.com
+                      ||
+                      vv
+           Load Balancer (HAproxy)
+          (Distribution Algorithm)
+                      ||
+                      vv
+             -------------------
+         ||                       ||
+         vv                       vv
+    Nginx Web Server     Application Server
+         ||                       ||
+         vv                       vv
+   (Static Files)        (Application Code)
+         ||                       ||
+         vv                       vv
+             -------------------
+                      ||
+                      vv
+           MySQL Database Cluster
+          (Primary-Replica setup)
+                      ||
+                      vv
+             -------------------
+         ||                       ||
+         vv                       vv
+     Replica Node         Replica Node
